@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		03AA9FA5526B4C3C920353A7 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6B65A47617E2448BB2588441 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				8DADE9FF528449DE919FFD33 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		36A28631CC5E45C1AF05FEDB /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4B74883F7B9146138CC277DD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				C6C399537F01480787C430ED /* CMake Rules */,
+			);
+			dependencies = (
+				3D67439409DD4D5BA7CC3D2F /* PBXTargetDependency */,
+				A11BA20B8DE34263AD31BCE3 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4E76EBBD2B854FE7AE03A09C /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.h */ = {isa = PBXBuildFile; fileRef = C31246CB11CD4C68B4E47B25 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.h */; };
+		A46DEC5335BD40CEA2A66F0B /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A61654954E2C45159FDF833A /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */; };
+		B68C2B73E0424AA6899EE067 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.cpp */ = {isa = PBXBuildFile; fileRef = EAAF9481B9F74E45860920A1 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.cpp */; };
+		FE507FE5F1654990A20375B8 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 9B44CB8147894DE18CB791DA /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		132D9F3B655F43DCA515A2EC /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		B739549CA61F40D98013D29D /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		F399787EB0254B0BA370C41B /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		FBC57A173D5A4B94B98B99C3 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0A56299C186C48B39041D79E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1706ED20982F410C9BA7A7E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 544FFC1B28F34F9A9A2ADFA9;
+			remoteInfo = mpc;
+		};
+		B5CACEB85F0B4352A6CC0E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1706ED20982F410C9BA7A7E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03AA9FA5526B4C3C920353A7;
+			remoteInfo = ZERO_CHECK;
+		};
+		DA0247F6F23C402A8CA5C049 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1706ED20982F410C9BA7A7E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03AA9FA5526B4C3C920353A7;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37F6D7B402244AA996DCFF68 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		38F877A6ED0D45B8ABD37455 /* mpc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = mpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B44CB8147894DE18CB791DA /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		A61654954E2C45159FDF833A /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C31246CB11CD4C68B4E47B25 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MPC.h; path = src/MPC.h; sourceTree = SOURCE_ROOT; };
+		E28B240A5444497DA3AD6603 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		EAAF9481B9F74E45860920A1 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MPC.cpp; path = src/MPC.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1B3583D7CE9D4BA088C592ED /* mpc */ = {
+			isa = PBXGroup;
+			children = (
+				595936AD40A7409D8842960E /* Source Files */,
+				85B389A00DAF4CC5A883E5EF /* Header Files */,
+				A61654954E2C45159FDF833A /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */,
+			);
+			name = mpc;
+			sourceTree = "<group>";
+		};
+		26FDE6370E734BE0B37A5AFE /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				AE97E6EC1E12486AB0F23ACD /* CMake Rules */,
+				E28B240A5444497DA3AD6603 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		2B639FDC2C364253B8608F34 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				57278A89149249EFAA56A55A /* CMake Rules */,
+				37F6D7B402244AA996DCFF68 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		57278A89149249EFAA56A55A /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		595936AD40A7409D8842960E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAAF9481B9F74E45860920A1 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.cpp */,
+				9B44CB8147894DE18CB791DA /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		85B389A00DAF4CC5A883E5EF /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				C31246CB11CD4C68B4E47B25 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		AE97E6EC1E12486AB0F23ACD /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D20F46E476E14F8F9E953307 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38F877A6ED0D45B8ABD37455 /* mpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6F21822A10B45BD93528291 = {
+			isa = PBXGroup;
+			children = (
+				1B3583D7CE9D4BA088C592ED /* mpc */,
+				26FDE6370E734BE0B37A5AFE /* ALL_BUILD */,
+				2B639FDC2C364253B8608F34 /* ZERO_CHECK */,
+				D20F46E476E14F8F9E953307 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		544FFC1B28F34F9A9A2ADFA9 /* mpc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8696C2BDC7584A2CACEEBDE5 /* Build configuration list for PBXNativeTarget "mpc" */;
+			buildPhases = (
+				67B2983967C743B28B6FB540 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C5783DEA93549918FFF92E3 /* PBXTargetDependency */,
+			);
+			name = mpc;
+			productName = mpc;
+			productReference = 38F877A6ED0D45B8ABD37455 /* mpc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1706ED20982F410C9BA7A7E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0830;
+			};
+			buildConfigurationList = C80B2F60980B470D8824C520 /* Build configuration list for PBXProject "MPC" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				FBC57A173D5A4B94B98B99C3 /* Debug */,
+				F399787EB0254B0BA370C41B /* Release */,
+				132D9F3B655F43DCA515A2EC /* MinSizeRel */,
+				B739549CA61F40D98013D29D /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = D6F21822A10B45BD93528291;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				36A28631CC5E45C1AF05FEDB /* ALL_BUILD */,
+				03AA9FA5526B4C3C920353A7 /* ZERO_CHECK */,
+				544FFC1B28F34F9A9A2ADFA9 /* mpc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10ECB97E36CA4DCDA306F1C3 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		8DADE9FF528449DE919FFD33 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC -f /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C6C399537F01480787C430ED /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC -f /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E31A75D138CA48EC8148AC6F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67B2983967C743B28B6FB540 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68C2B73E0424AA6899EE067 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/MPC.cpp */,
+				FE507FE5F1654990A20375B8 /* /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C5783DEA93549918FFF92E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03AA9FA5526B4C3C920353A7 /* ZERO_CHECK */;
+			targetProxy = DA0247F6F23C402A8CA5C049 /* PBXContainerItemProxy */;
+		};
+		3D67439409DD4D5BA7CC3D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 544FFC1B28F34F9A9A2ADFA9 /* mpc */;
+			targetProxy = 0A56299C186C48B39041D79E /* PBXContainerItemProxy */;
+		};
+		A11BA20B8DE34263AD31BCE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03AA9FA5526B4C3C920353A7 /* ZERO_CHECK */;
+			targetProxy = B5CACEB85F0B4352A6CC0E80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		041C9F8C4FBA477198B3C384 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		09DC909DDD974EECA933C580 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1E1CA660DBD242AFABBFC2FA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		35AFC116406847BBACB65549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
+				OTHER_CPLUSPLUSFLAGS = "-Wall      -std=c++11 -O3";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		376F7ECA84414267AEC13931 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
+				OTHER_CPLUSPLUSFLAGS = "-Wall     -DNDEBUG   -std=c++11 -O3";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		42F54AD8A1484CF5AB680386 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		508AFC104F144301AF97D3BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/build;
+			};
+			name = Debug;
+		};
+		539C1FF1F43D40C5B5E5F8C4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/build;
+			};
+			name = MinSizeRel;
+		};
+		5570CEFCB0414E77B6CE6C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/build;
+			};
+			name = Release;
+		};
+		55C7D509D926438B844AAA34 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/build;
+			};
+			name = RelWithDebInfo;
+		};
+		6703BC190ADC46AABC0C0330 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6D65FB3E2D304D9A9B773FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		89A4A4C5C2624F919B09343E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
+				OTHER_CPLUSPLUSFLAGS = "-Wall        -DNDEBUG   -std=c++11 -O3";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BAFBE03AADE94D9A8BEF0223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/usr/local/lib /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib";
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib /usr/local/opt/openssl/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/opt/openssl/lib /usr/local/Cellar/libuv/1.11.0/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/Cellar/libuv/1.11.0/lib";
+				OTHER_CPLUSPLUSFLAGS = "-Wall     -DNDEBUG   -std=c++11 -O3";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lipopt -lz -lssl -luv -luWS";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mpc;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C039BB26B92C4EBBA3D92B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D123A3960C754B11B9A14BD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/usr/local/include,"/Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC/src/Eigen-3.3",/usr/local/opt/openssl/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/emilbalcu/Courses/Udacity/NanodegreeSDC/Term_2/MPC;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B74883F7B9146138CC277DD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D65FB3E2D304D9A9B773FFA /* Debug */,
+				42F54AD8A1484CF5AB680386 /* Release */,
+				1E1CA660DBD242AFABBFC2FA /* MinSizeRel */,
+				6703BC190ADC46AABC0C0330 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6B65A47617E2448BB2588441 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D123A3960C754B11B9A14BD8 /* Debug */,
+				C039BB26B92C4EBBA3D92B03 /* Release */,
+				041C9F8C4FBA477198B3C384 /* MinSizeRel */,
+				09DC909DDD974EECA933C580 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8696C2BDC7584A2CACEEBDE5 /* Build configuration list for PBXNativeTarget "mpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35AFC116406847BBACB65549 /* Debug */,
+				BAFBE03AADE94D9A8BEF0223 /* Release */,
+				376F7ECA84414267AEC13931 /* MinSizeRel */,
+				89A4A4C5C2624F919B09343E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C80B2F60980B470D8824C520 /* Build configuration list for PBXProject "MPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508AFC104F144301AF97D3BB /* Debug */,
+				5570CEFCB0414E77B6CE6C7F /* Release */,
+				539C1FF1F43D40C5B5E5F8C4 /* MinSizeRel */,
+				55C7D509D926438B844AAA34 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1706ED20982F410C9BA7A7E0 /* Project object */;
+}
