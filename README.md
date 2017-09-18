@@ -19,7 +19,7 @@ fg[2 + epsi_start + i] = epsi1 - ((psi0 - psides0) + v0 * delta0 / Lf * dt);
 
 The objective function consist of the following :
 
-1. State Cost : crosstrack error (cte), heading error and speed error. The three costs were weighted to keep the car at the center of the track. The heading cost has the highest weight to account for the curvy road. The cte error has a weigth of 10, whereas the speed error of 1. The cost term is uesd to prevet the car from stopping if perfectly centered.  
+1. State Cost : crosstrack error (cte), heading error and speed error. The three costs were weighted to keep the car at the center of the track. The heading cost has the highest weight to account for the curvy road. The cte error has a weigth of 100, whereas the speed error a weight of 50. The cost term is used to prevent the car from stopping if perfectly centered.  
 2. Actuation cost
 
 3. Rate of change in actuation. To prevent osccilations in the sterring or suddently aceleration, the cost dependent on changes in actuation was added. Fo a smooth path the steering angle was weighted with 1700 .  
@@ -33,7 +33,7 @@ fg[0] = 0;
 for (int t = 0; t < N; t++) {
     fg[0] += 100*CppAD::pow(vars[cte_start + t], 2);
     fg[0] += 1500*CppAD::pow(vars[epsi_start + t], 2);
-    fg[0] += CppAD::pow(vars[v_start + t] - ref_v, 2);
+    fg[0] += 50*CppAD::pow(vars[v_start + t] - ref_v, 2);
 }
         
 // Minimize change-rate.
@@ -44,7 +44,7 @@ for (int t = 0; t < N - 1; t++) {
         
 // Minimize the value gap between sequential actuations.
 for (int t = 0; t < N - 2; t++) {
-   fg[0] += CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
+   fg[0] += 500*CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
    fg[0] += CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
 }
 
@@ -52,9 +52,9 @@ for (int t = 0; t < N - 2; t++) {
 
 ## Receding Horizon
 
-The MPC is used to predicts the state of the system based on the following "N" steps. For setting the horizon I tried out different combination and settled for 2 seconds (N = 20 and dt = 0.1s). 
+The MPC is used to predicts the state of the system based on the following "N" steps. For setting the horizon I tried out different combination and settled for 0.75 seconds (N = 15 and dt = 0.05s). 
 
- Within a smaller horizon the car behaved erractily at curves .
+Within a smaller horizon the car behaved erractily at curves .
 
 ## Polynomial fitting and Preprocessing
 
@@ -74,15 +74,17 @@ ptsy_car[i] = x * sin(-psi) + y * cos(-psi);
 
 ## Latency
 
-In the real world there is a latency between commands and the actual actuation. Therefore the controller has
-to thake account for these delays. The latency is inserter in the kinetic model and used to predict the state of the car as follows:
+In the real world there is a latency between commands and the actual actuation. The controller should compansate for
+for these delays. 
+
+The latency is inserter in the kinetic model and used to predict the state of the car as follows:
 ```C++
 
 // predict state in 100ms
 double latency = 0.1;
 x = x + v*cos(psi)*latency;
 y = y + v*sin(psi)*latency;
-psi = psi + v*delta/Lf*latency;
+psi = psi - v*delta/Lf*latency;
 v = v + acceleration*latency;
 
 
