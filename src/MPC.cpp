@@ -22,8 +22,8 @@ const double Lf = 2.67;
 // or do something completely different
 double ref_v = 40;
 
-size_t N = 20;		// larger values -> longer computation time / cost fct.
-double dt = 0.1;	// N * dt -> 1 sec prediction
+size_t N = 15;		// larger values -> longer computation time / cost fct.
+double dt = 0.05;	// N * dt -> 1 sec prediction
 
 // The solver takes all the state variables and actuator
 // variables in a singular vector. Thus, we should to establish
@@ -60,9 +60,9 @@ public:
         // any anything you think may be beneficial.
         
         for (int t = 0; t < N; t++) {
-            fg[0] += 10*CppAD::pow(vars[cte_start + t], 2);
-            fg[0] += 4200*CppAD::pow(vars[epsi_start + t], 2);
-            fg[0] += CppAD::pow(vars[v_start + t] - ref_v, 2);
+            fg[0] += 100*CppAD::pow(vars[cte_start + t], 2);
+            fg[0] += 1500*CppAD::pow(vars[epsi_start + t], 2);
+            fg[0] += 50*CppAD::pow(vars[v_start + t] - ref_v, 2);
         }
         
         // Minimize change-rate.
@@ -73,7 +73,7 @@ public:
         
         // Minimize the value gap between sequential actuations.
         for (int t = 0; t < N - 2; t++) {
-            fg[0] += CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
+            fg[0] += 500*CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
             fg[0] += CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
         }
         
@@ -154,13 +154,13 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
     size_t i;
     typedef CPPAD_TESTVECTOR(double) Dvector;
     
-    // TODO: Set the number of model variables (includes both states and inputs).
+    // number of model variables (includes both states and inputs).
     // For example: If the state is a 4 element vector, the actuators is a 2
     // element vector and there are 10 timesteps. The number of variables is:
     //
     // 4 * 10 + 2 * 9
     size_t n_vars = 6*N + 2*(N-1);
-    // TODO: Set the number of constraints
+    // Set the number of constraints
     size_t n_constraints = 6*N;
     
     // Initial value of the independent variables.
@@ -270,18 +270,15 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
     //
     // {...} is shorthand for creating a vector, so auto x1 = {1.0,2.0}
     // creates a 2 element double vector.
-    return {solution.x[x_start + 1],   solution.x[y_start + 1],
-        solution.x[psi_start + 1], solution.x[v_start + 1],
-        solution.x[cte_start + 1], solution.x[epsi_start + 1],
-        solution.x[delta_start],   solution.x[a_start],
-        solution.x[x_start+2],
-        solution.x[y_start+2],
-        solution.x[x_start+3],
-        solution.x[y_start+3],
-        solution.x[x_start+4],
-        solution.x[y_start+4],
-        solution.x[x_start+5],
-        solution.x[y_start+5],
-        solution.x[x_start+6],
-        solution.x[y_start+6]};
+    
+    vector<double> results;
+    results.push_back ( solution.x[delta_start]);
+    results.push_back(solution.x[a_start]);
+    
+    for (int i = 0; i<N;i++){
+        results.push_back(solution.x[x_start+i+1]);
+        results.push_back(solution.x[y_start+i+1]);
+    }
+    return results;
+
 }

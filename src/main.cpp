@@ -71,7 +71,7 @@ int main() {
     // MPC is initialized here!
     MPC mpc;
     
-
+    
     h.onMessage([&mpc](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
                        uWS::OpCode opCode) {
         // "42" at the start of the message means there's a websocket message event.
@@ -93,6 +93,8 @@ int main() {
                     double psi = j[1]["psi"];
                     double v = j[1]["speed"];
                     double delta = j[1]["steering_angle"];
+                    
+                    
                     double acceleration = j[1]["throttle"];
                     
                     double Lf = 2.67;
@@ -101,7 +103,7 @@ int main() {
                     double latency = 0.1;
                     px = px + v*cos(psi)*latency;
                     py = py + v*sin(psi)*latency;
-                    psi = psi + v*delta/Lf*latency;
+                    psi = psi - v*delta/Lf*latency;
                     v = v + acceleration*latency;
                     
                     //Calculate steering angle and throttle using MPC.
@@ -110,7 +112,7 @@ int main() {
                     Eigen::VectorXd waypnt_x,waypnt_y;
                     waypnt_x= Eigen::VectorXd::Zero(ptsx.size());
                     waypnt_y= Eigen::VectorXd::Zero(ptsx.size());
-
+                    
                     
                     // transform to car coordinate system
                     for (int i=0; i< ptsx.size(); i++){
@@ -120,44 +122,33 @@ int main() {
                         ptsy_car[i] = x * sin(-psi) + y * cos(-psi);
                         waypnt_x(i) = ptsx_car[i];
                         waypnt_y(i) = ptsy_car[i];
-
+                        
                     }
                     
                     
                     auto coeffs = polyfit(waypnt_x,waypnt_y,3);
                     
-                
                     
-                    //calculate the cross track error
-                    double cte = polyeval(coeffs,px) -py;
+                    
+                    //calculate the cross track error in car coordinat system px = py = psi = 0
+                    //double cte = polyeval(coeffs,x) - y;
+                    double cte = polyeval(coeffs,0) - 0;
                     
                     // calculate the orientation error
-                    double epsi = psi - atan(coeffs[1]);
+                    //double epsi = psi - atan(coeffs[1]);
+                    double epsi = - atan(coeffs[1]);
                     
                     Eigen::VectorXd state(6);
                     state << 0, 0, 0, v, cte, epsi;
                     
-
+                    
                     auto solution = mpc.Solve(state, coeffs);
                     
                     
                     
-                    double steer_value = -1.0*solution[6]/deg2rad(25)/Lf;
-                    double throttle_value = solution[7];
-
+                    double steer_value = -1.0*solution[0]/deg2rad(25)/Lf;
+                    double throttle_value = solution[1];
                     
-                    
-                    std::cout << "x = " << solution[0] << std::endl;
-                    std::cout << "y = " << solution[1] << std::endl;
-                    std::cout << "psi = " << solution[2] << std::endl;
-                    std::cout << "v = " << solution[3] << std::endl;
-                    std::cout << "cte = " << solution[4] << std::endl;
-                    std::cout << "epsi = " << solution[5] << std::endl;
-                    std::cout << "delta = " << solution[6] << std::endl;
-                    std::cout << "a = " << solution[7] << std::endl;
-                    std::cout << std::endl;
-                    
-
                     json msgJson;
                     // NOTE: Remember to divide by deg2rad(25) before you send the steering value back.
                     // Otherwise the values will be in between [-deg2rad(25), deg2rad(25] instead of [-1, 1].
@@ -165,33 +156,34 @@ int main() {
                     msgJson["throttle"] = throttle_value;
                     
                     //Display the MPC predicted trajectory
-                    //.. add (x,y) points to list here, points are in reference to the vehicle's coordinate system
+                    //points are in reference to the vehicle's coordinate system
                     // the points in the simulator are connected by a Green line
                     
                     vector<double> mpc_x_vals;
                     vector<double> mpc_y_vals;
                     
-                    for(int i=8; i< solution.size();i++){
-                    
-                        if (i%2==0){
-                            mpc_x_vals.push_back(solution[i]);
-                        
-                        }else{
-                            mpc_y_vals.push_back(solution[i]);
+                    for(int i=2; i< solution.size();i++){
+                        if (solution[i] != 0){
+                            if (i%2==0){
+                                mpc_x_vals.push_back(solution[i]);
+                                cout<<"x"<<solution[i]<<endl;
+                                
+                            }else{
+                                mpc_y_vals.push_back(solution[i]);
+                                cout<<"y"<<solution[i]<<endl;
+                            }
                         }
+                        
                     }
                     
                     
                     msgJson["mpc_x"] = mpc_x_vals;
                     msgJson["mpc_y"] = mpc_y_vals;
                     
-     
+                    
                     
                     //Display the waypoints/reference line
-
-                    
-
-                    //.. add (x,y) points to list here, points are in reference to the vehicle's coordinate system
+                    // points are in reference to the vehicle's coordinate system
                     // the points in the simulator are connected by a Yellow line
                     
                     vector<double> next_x_vals;
