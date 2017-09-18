@@ -38,7 +38,7 @@ for (int t = 0; t < N; t++) {
         
 // Minimize change-rate.
 for (int t = 0; t < N - 1; t++) {
-    fg[0] += 1700*CppAD::pow(vars[delta_start + t], 2);
+    fg[0] += 1500*CppAD::pow(vars[delta_start + t], 2);
     fg[0] += CppAD::pow(vars[a_start + t], 2);
 }
         
